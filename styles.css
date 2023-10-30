@@ -1,0 +1,94 @@
+.container {
+    display: grid; 
+    grid-template-columns: auto minmax(300px, 1fr);
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 20px 5px; 
+    grid-template-areas: 
+    "Profile AboutMe1 AboutMe1 AboutMe2 AboutMe2"
+    "Profile MyProjects MyProjects MyProjects MyProjects"
+    "Profile MyProjects MyProjects MyProjects MyProjects"; 
+    width: 100%;
+    height: 100%;
+    }
+    .Profile { grid-area: Profile; }
+    .AboutMe1 { grid-area: AboutMe1; }
+    .AboutMe2 { grid-area: AboutMe2; }
+    .MyProjects { grid-area: MyProjects; }
+
+    body{
+        background-image: url(pfpbackground.bmp);
+    }
+
+    .Profile{
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+
+    }
+    .pfp{
+        margin-top: 25px;
+        margin-left: 2px;
+        margin-right: 20px;
+        border-radius: 50%;
+        border: 5px dotted black;
+        max-height: 200px;
+        max-width: 200px;
+    }
+    .name{
+        font-size: 30px;
+        text-align: center;
+        border-bottom: dashed;
+        border-bottom-width: 5px;
+    }
+
+    .job{
+        font-size: 20px;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .socialmedia{
+        margin-top: -10px;
+        padding-left: 40px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .socialmedia *{
+        max-width: 20px;
+        max-height: 20px;
+        margin: 2px;
+    }
+    .github{
+        max-height: 300px;
+        max-width: 200px;
+    }
+    .AboutMe1{
+        padding-top: 20px;
+        border-bottom: 5px dashed black;
+    }
+    .AboutMe1 > h2{
+        text-decoration: underline;
+    }
+    .AboutMe2 {
+        padding-top: 20px;
+        border-bottom: 5px dashed black;
+    }
+    .AboutMe2 > ul{
+        display:inline-block;
+    }
+    .AboutMe2 > h2{
+        text-decoration: underline;
+    }
+    
+
+    .MyProjects {
+        display: flex;
+        flex-direction:row;
+        max-width: 600px;
+        
+    }
+    .MyProjects > div {
+        padding-left: 1px;
+        max-width: 15rem;
+        max-height: 20rem;
+    }
